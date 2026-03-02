@@ -10,7 +10,7 @@ import { WagmiProvider } from 'wagmi';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { type Chain } from 'viem';
 
-// 1. DEFINING THE CREDITCOIN NETWORK (TESTNET)
+// 1. DEFINIÇÃO DA REDE (Mantemos como constante fora)
 const creditcoinTestnet = {
     id: 595281,
     name: 'Creditcoin Testnet',
@@ -24,19 +24,19 @@ const creditcoinTestnet = {
     testnet: true,
 } as const satisfies Chain;
 
-// 2. WAGMI + RAINBOWKIT CONFIGURATION
+// 2. CONFIGURAÇÃO WAGMI
 const config = getDefaultConfig({
     appName: 'Finara DeFi',
-    projectId: 'SEU_PROJECT_ID_AQUI', // Replace with your WalletConnect project ID
+    projectId: '09c4593bff566de4ebaa6b3eba0f3d14', 
     chains: [creditcoinTestnet],
     ssr: true,
 });
 
-// 3. QUERY CLIENT
-const queryClient = new QueryClient();
-
-// 4. PROVIDERS COMPONENT
 export function Providers({ children }: { children: React.ReactNode }) {
+    // 3. ESTADO DO QUERY CLIENT
+    // Criar dentro do componente evita conflitos de cache no Next.js
+    const [queryClient] = React.useState(() => new QueryClient());
+
     return (
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>
