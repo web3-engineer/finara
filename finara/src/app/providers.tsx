@@ -32,8 +32,13 @@ const config = getDefaultConfig({
 
 // Componente interno para ler o tema atual e passar pro RainbowKit
 function RainbowKitWrapper({ children }: { children: React.ReactNode }) {
+    const [mounted, setMounted] = React.useState(false);
     const { resolvedTheme } = useTheme();
-    const isDarkMode = resolvedTheme === 'dark';
+
+    React.useEffect(() => setMounted(true), []);
+
+    // Antes de montar no client, usa dark como default para evitar hydration mismatch
+    const isDarkMode = mounted ? resolvedTheme === 'dark' : true;
 
     return (
         <RainbowKitProvider

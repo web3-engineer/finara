@@ -154,7 +154,11 @@ export default function AboutPage() {
 
             </main>
 
+<<<<<<< HEAD
             {/* Footer */}
+=======
+            {/* Footer Polish */}
+>>>>>>> 247eace6c (Páginas adicionadas ao site)
             <footer className="mt-auto py-12 border-t border-white/5 bg-black/20 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-white/30 text-[10px] gap-8 font-bold uppercase tracking-widest">
                     <div>
@@ -169,4 +173,8 @@ export default function AboutPage() {
             </footer>
         </div>
     );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 247eace6c (Páginas adicionadas ao site)
