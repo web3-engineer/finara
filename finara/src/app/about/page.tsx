@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import {
     CubeIcon,
     CpuChipIcon,
@@ -152,13 +153,67 @@ export default function AboutPage() {
                     </div>
                 </motion.section>
 
+                {/* Team Section */}
+                <div className="w-full mt-32">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-2xl font-light tracking-widest text-white/90 uppercase mb-4">Quem Somos</h2>
+                        <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-emerald-500 to-transparent mx-auto"></div>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                        {[
+                            {
+                                name: "Isabela Paiva",
+                                role: "Founder & Visionary",
+                                image: "/team/isabela.jpg",
+                                description: "Especialista em ecossistemas Web3 e design de produtos DeFi, focada em criar experiências financeiras memoráveis."
+                            },
+                            {
+                                name: "José (Zé)",
+                                role: "Co-Founder & Engineering",
+                                image: "/team/ze.png",
+                                description: "Arquiteto de sistemas distribuídos apaixonado por tecnologia blockchain e infraestrutura financeira escalável."
+                            }
+                        ].map((member, index) => (
+                            <motion.div
+                                key={member.name}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.2, duration: 0.6 }}
+                                className="relative group block"
+                            >
+                                <div className="overflow-hidden rounded-[2.5rem] bg-[#120a07]/60 border border-white/5 backdrop-blur-xl p-8 hover:border-emerald-500/20 transition-all duration-500 shadow-2xl h-full flex flex-col items-center text-center">
+                                    <div className="relative w-32 h-32 mb-6 group-hover:scale-105 transition-transform duration-500">
+                                        <div className="absolute inset-0 bg-emerald-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                        <div className="relative w-full h-full rounded-full border-2 border-emerald-500/20 overflow-hidden">
+                                            <Image
+                                                src={member.image}
+                                                alt={member.name}
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
+                                    <p className="text-xs font-bold text-emerald-500 tracking-[0.2em] uppercase mb-4">{member.role}</p>
+                                    <p className="text-white/50 text-sm font-light leading-relaxed">
+                                        {member.description}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
             </main>
 
-<<<<<<< HEAD
-            {/* Footer */}
-=======
             {/* Footer Polish */}
->>>>>>> 247eace6c (Páginas adicionadas ao site)
             <footer className="mt-auto py-12 border-t border-white/5 bg-black/20 backdrop-blur-md">
                 <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-white/30 text-[10px] gap-8 font-bold uppercase tracking-widest">
                     <div>
@@ -173,8 +228,4 @@ export default function AboutPage() {
             </footer>
         </div>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 247eace6c (Páginas adicionadas ao site)

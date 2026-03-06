@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-[#0a0705] text-white`}>
         <Providers>
           <Navbar /> {/* Ela entra aqui, antes das páginas */}
