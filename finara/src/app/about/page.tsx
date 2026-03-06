@@ -117,7 +117,7 @@ export default function AboutPage() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="w-full relative py-20 px-10 rounded-[3rem] bg-gradient-to-br from-[#111a15] to-[#0a0705] border border-white/5 overflow-hidden shadow-2xl"
+                    className="w-full relative py-20 px-10 rounded-[3rem] bg-gradient-to-br from-[#111a15] to-[#0a0705] border border-white/5 overflow-hidden shadow-2xl mb-32"
                 >
                     <div className="absolute top-0 right-0 w-[40%] h-full bg-emerald-600/5 blur-[80px] pointer-events-none"></div>
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -152,6 +152,59 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </motion.section>
+
+                {/* Expertise Section */}
+                <div className="w-full mb-32">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-2xl font-light tracking-widest text-white/90 uppercase mb-4">Nossa Expertise</h2>
+                        <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto"></div>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Security Card */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="group p-10 rounded-[2.5rem] bg-[#120a07]/40 border border-white/5 backdrop-blur-xl relative overflow-hidden"
+                        >
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-3xl group-hover:bg-emerald-500/10 transition-colors"></div>
+                            <ShieldCheckIcon className="w-12 h-12 text-emerald-500 mb-6 group-hover:scale-110 transition-transform duration-500" />
+                            <h3 className="text-xl font-bold text-white mb-4">Segurança Ofensiva & AppSec</h3>
+                            <p className="text-white/50 text-sm font-light leading-relaxed">
+                                Foco rigoroso em segurança de aplicações. Nossa experiência inclui análise de vulnerabilidades, implementação de boas práticas de desenvolvimento seguro e testes proativos para garantir que cada contrato e interface da Finara seja blindado contra ameaças web.
+                            </p>
+                            <div className="mt-8 flex gap-2">
+                                <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] text-emerald-400 font-bold uppercase tracking-wider">Vulnerability Analysis</span>
+                                <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] text-emerald-400 font-bold uppercase tracking-wider">Secure Dev</span>
+                            </div>
+                        </motion.div>
+
+                        {/* Development Card */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="group p-10 rounded-[2.5rem] bg-[#120a07]/40 border border-white/5 backdrop-blur-xl relative overflow-hidden"
+                        >
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 blur-3xl group-hover:bg-orange-500/10 transition-colors"></div>
+                            <CpuChipIcon className="w-12 h-12 text-orange-500 mb-6 group-hover:scale-110 transition-transform duration-500" />
+                            <h3 className="text-xl font-bold text-white mb-4">Engenharia de Software Moderna</h3>
+                            <p className="text-white/50 text-sm font-light leading-relaxed">
+                                Desenvolvimento de aplicações escaláveis com foco em performance e entrega contínua. Atuamos de ponta a ponta no ciclo de software, da ideação à implementação de interfaces de alta fidelidade na Next Hub Academy, garantindo qualidade de código e robustez técnica.
+                            </p>
+                            <div className="mt-8 flex gap-2">
+                                <span className="px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-[10px] text-orange-400 font-bold uppercase tracking-wider">Continuous Delivery</span>
+                                <span className="px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-[10px] text-orange-400 font-bold uppercase tracking-wider">Next-Gen Stack</span>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
 
                 {/* Team Section */}
                 <div className="w-full mt-32">
