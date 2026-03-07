@@ -19,8 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // A propriedade suppressHydrationWarning ignora o alerta gerado pelo next-themes
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`${inter.className} bg-[#0a0705] text-white`}>
         <Providers>
           <Navbar /> {/* Ela entra aqui, antes das páginas */}
