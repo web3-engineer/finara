@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import '@rainbow-me/rainbowkit/styles.css';
-import { Providers } from './providers';
-import { Navbar } from '../components/navbar'; // Importando a nossa Navbar!
+
+// IMPORTANTE: Verifique se o caminho destas importações bate com as suas pastas
+import { Providers } from "./providers"; 
+import { Navbar } from "../components/navbar"; // Ou "@/components/Navbar", dependendo do seu setup
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Finara | Creditcoin DeFi Ecosystem",
-  description: "Secure, scalable, and reliable on-chain finance. Access yield, manage liquidity, and trade assets on the Creditcoin L1.",
+  title: "Finara | On-Chain Finance",
+  description: "Redefina as finanças on-chain com a infraestrutura robusta da Creditcoin.",
 };
 
 export default function RootLayout({
@@ -18,7 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // A propriedade suppressHydrationWarning ignora o alerta gerado pelo next-themes
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-[#0a0705] text-white`}>
         <Providers>
           <Navbar /> {/* Ela entra aqui, antes das páginas */}

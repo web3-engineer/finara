@@ -1,23 +1,34 @@
 'use client';
 
 import * as React from 'react';
+
+// 1. IMPORTAÇÃO OBRIGATÓRIA DO CSS DO RAINBOWKIT (Evita o botão bugado)
+import '@rainbow-me/rainbowkit/styles.css';
+
 import {
     RainbowKitProvider,
     getDefaultConfig,
     darkTheme,
-    lightTheme, // Adicionado para o tema claro
+    lightTheme,
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import { ThemeProvider, useTheme } from 'next-themes'; // O motor do nosso tema
+import { ThemeProvider, useTheme } from 'next-themes';
 import { type Chain } from 'viem';
 
+// ==========================================
+// CONFIGURAÇÃO OFICIAL DA CREDITCOIN TESTNET
+// ==========================================
 const creditcoinTestnet = {
-    id: 595281,
+    id: 102031, // <-- Chain ID oficial corrigido
     name: 'Creditcoin Testnet',
     nativeCurrency: { name: 'Creditcoin', symbol: 'CTC', decimals: 18 },
-    rpcUrls: { default: { http: ['https://rpc.cc3-testnet.creditcoin.network'] } },
-    blockExplorers: { default: { name: 'Creditcoin Explorer', url: 'https://creditcoin.blockscout.com' } },
+    rpcUrls: { 
+        default: { http: ['https://rpc.cc3-testnet.creditcoin.network'] } 
+    },
+    blockExplorers: { 
+        default: { name: 'Creditcoin Explorer', url: 'https://creditcoin-testnet.blockscout.com' } // <-- Explorer da Testnet corrigido
+    },
     testnet: true,
 } as const satisfies Chain;
 
@@ -30,7 +41,9 @@ const config = getDefaultConfig({
     ssr: true,
 });
 
-// Componente interno para ler o tema atual e passar pro RainbowKit
+// ==========================================
+// INTEGRAÇÃO DE TEMA (DARK/LIGHT MODE)
+// ==========================================
 function RainbowKitWrapper({ children }: { children: React.ReactNode }) {
     const [mounted, setMounted] = React.useState(false);
     const { resolvedTheme } = useTheme();
@@ -43,12 +56,12 @@ function RainbowKitWrapper({ children }: { children: React.ReactNode }) {
     return (
         <RainbowKitProvider
             theme={isDarkMode ? darkTheme({
-                accentColor: '#f97316',
+                accentColor: '#10b981', // Verde Esmeralda (combina melhor com sua UI da Finara)
                 accentColorForeground: 'white',
                 borderRadius: 'large',
                 overlayBlur: 'small',
             }) : lightTheme({
-                accentColor: '#f97316',
+                accentColor: '#10b981', // Verde Esmeralda para o modo claro também
                 accentColorForeground: 'white',
                 borderRadius: 'large',
                 overlayBlur: 'small',
@@ -59,6 +72,9 @@ function RainbowKitWrapper({ children }: { children: React.ReactNode }) {
     );
 }
 
+// ==========================================
+// PROVIDER PRINCIPAL
+// ==========================================
 export function Providers({ children }: { children: React.ReactNode }) {
     const [queryClient] = React.useState(() => new QueryClient());
 
