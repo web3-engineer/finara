@@ -36,10 +36,55 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
+// Validate ../../../src/app/about/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/about">> = Specific
+  const handler = {} as typeof import("../../../src/app/about/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/market/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/market">> = Specific
+  const handler = {} as typeof import("../../../src/app/market/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../src/app/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/">> = Specific
   const handler = {} as typeof import("../../../src/app/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/vaults/borrow/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/vaults/borrow">> = Specific
+  const handler = {} as typeof import("../../../src/app/vaults/borrow/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/vaults/lend/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/vaults/lend">> = Specific
+  const handler = {} as typeof import("../../../src/app/vaults/lend/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/vaults/yields/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/vaults/yields">> = Specific
+  const handler = {} as typeof import("../../../src/app/vaults/yields/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

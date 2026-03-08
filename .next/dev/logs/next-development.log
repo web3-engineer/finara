@@ -1,34 +1,8 @@
-[00:00:01.657] Server  LOG     ✓ Ready in 1273ms
-[00:00:16.224] Server  WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[00:00:16.489] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:17.368] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[00:03:05.169] Server  LOG     ✓ Compiled in 579ms
-[00:11:24.850] Server  LOG     ✓ Compiled in 114ms
-[00:18:42.217] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
-[00:18:42.221] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
-[00:18:42.382] Server  WARN    Multiple versions of Lit loaded. Loading multiple versions is not recommended. See https://lit.dev/msg/multiple-versions for more information.
-[00:18:42.566] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:18:43.394] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[00:19:59.005] Server  LOG     ✓ Compiled in 62ms
-[00:39:09.945] Server  LOG     ✓ Compiled in 51ms
-[00:46:08.192] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 3 times.
-[00:46:08.201] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 3 times.
-[00:46:08.549] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:46:09.444] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[00:46:15.311] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:46:16.142] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[02:10:45.387] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:10:46.303] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[02:35:30.107] Server  LOG     ✓ Compiled in 176ms
-[02:36:39.279] Server  LOG     ✓ Compiled in 240ms
-[02:39:41.898] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 4 times.
-[02:39:41.903] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 4 times.
-[02:39:42.263] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:39:43.129] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[02:40:30.050] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:40:30.598] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[02:40:58.684] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:40:59.128] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.142] Server  LOG     ✓ Ready in 944ms
+[00:02:47.742] Server  LOG     ○ Compiling / ...
+[00:03:19.904] Server  WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:03:22.824] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:23.137] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -65,28 +39,35 @@ It can also happen if the client has a browser extension installed which messes 
                       <script>
                       <script>
                       <RootLayout>
-                        <html lang="pt-BR" suppressHydrationWarning={true}>
-                          <body
-+                           className="inter_5972bc34-module__OU16Qa__className bg-[#050a07] text-white"
--                           className="inter_5972bc34-module__OU16Qa__className bg-[#050a07] text-white antigravity-sc..."
-                          >
+                        <html
+                          lang="en"
+-                         className="light"
+-                         style={{color-scheme:"light"}}
+                        >
                   ...
 
-[02:40:59.793] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[02:51:34.036] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:51:35.067] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[02:57:25.594] Server  LOG     ✓ Compiled in 152ms
-[02:57:54.094] Server  LOG     ✓ Compiled in 94ms
-[02:59:34.632] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 5 times.
-[02:59:34.637] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 5 times.
-[02:59:35.048] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:59:35.787] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:00:06.756] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:00:07.336] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:00:54.145] Server  WARN    ⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[03:00:54.200] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:00:54.506] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:03:24.192] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:03:24.192] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'count')
+[00:03:24.587] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:03:33.453] Server  LOG     ✓ Finished writing to filesystem cache in 12.8s
+[00:03:54.964] Server  LOG     ✓ Finished filesystem cache database compaction in 21.4s
+[00:03:55.910] Server  LOG     ✓ Finished writing to filesystem cache in 20.5s
+[00:05:12.233] Server  LOG     ○ Compiling /vaults/lend ...
+[00:05:31.581] Server  ERROR   ⨯ Error: The default export is not a React Component in "/market/page"
+[00:05:32.898] Server  ERROR   ⨯ Error: The default export is not a React Component in "/market/page"
+[00:06:03.284] Server  ERROR   ⨯ Error: The default export is not a React Component in "/market/page"
+[00:06:04.287] Server  ERROR   ⨯ Error: The default export is not a React Component in "/market/page"
+[00:06:06.332] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/market/page"
+[00:06:07.859] Server  LOG     ✓ Finished writing to filesystem cache in 36.2s
+[00:06:24.488] Server  LOG     ✓ Finished filesystem cache database compaction in 16.6s
+[00:06:29.624] Server  LOG     ✓ Finished writing to filesystem cache in 19.8s
+[00:09:46.183] Server  LOG     ✓ Compiled in 6.7s
+[00:09:49.519] Server  LOG     ○ Compiling /market ...
+[00:09:51.680] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
+[00:09:51.697] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
+[00:09:51.873] Server  WARN    Multiple versions of Lit loaded. Loading multiple versions is not recommended. See https://lit.dev/msg/multiple-versions for more information.
+[00:09:54.942] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:55.215] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -104,7 +85,7 @@ It can also happen if the client has a browser extension installed which messes 
         <ReplaySsrOnlyErrors>
         <DevRootHTTPAccessFallbackBoundary>
           <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+            <HTTPAccessFallbackErrorBoundary pathname="/market" notFound={<NotAllowedRootHTTPFallbackError>} ...>
               <RedirectBoundary>
                 <RedirectErrorBoundary router={{...}}>
                   <Head>
@@ -123,41 +104,30 @@ It can also happen if the client has a browser extension installed which messes 
                       <script>
                       <script>
                       <RootLayout>
-                        <html lang="pt-BR" suppressHydrationWarning={true}>
-                          <body
-+                           className="inter_5972bc34-module__OU16Qa__className bg-[#030805] text-white"
--                           className="inter_5972bc34-module__OU16Qa__className bg-[#030805] text-white antigravity-sc..."
-                          >
+                        <html
+                          lang="en"
+-                         className="light"
+-                         style={{color-scheme:"light"}}
+                        >
                   ...
 
-[03:00:55.035] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:03:12.335] Server  LOG     ✓ Compiled in 53ms
-[03:03:29.311] Server  LOG     ✓ Compiled in 52ms
-[03:03:53.874] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 6 times.
-[03:03:53.879] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 6 times.
-[03:03:54.398] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:03:55.062] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:05:04.917] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:05:05.668] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:06:33.939] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:06:34.778] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:07:35.035] Server  LOG     ✓ Compiled in 200ms
-[03:07:44.389] Server  LOG     ✓ Compiled in 67ms
-[03:09:23.141] Server  LOG     ✓ Compiled in 103ms
-[03:09:31.716] Server  LOG     ✓ Compiled in 51ms
-[03:09:56.089] Server  LOG     ✓ Compiled in 6ms
-[03:09:56.536] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 7 times.
-[03:09:56.540] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 7 times.
-[03:09:56.987] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:09:57.668] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:12:55.149] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:12:55.809] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:15:08.717] Server  LOG     ✓ Compiled in 130ms
-[03:15:33.418] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 8 times.
-[03:15:33.424] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 8 times.
-[03:15:33.848] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:15:34.591] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:19:11.604] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:19:12.514] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
-[03:20:09.318] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[03:20:10.377] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:09:55.796] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:09:56.040] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'count')
+[00:09:56.779] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:10:06.532] Server  LOG     ✓ Finished writing to filesystem cache in 14.5s
+[00:10:21.677] Server  LOG     ✓ Finished filesystem cache database compaction in 15.1s
+[00:10:22.110] Server  LOG     ✓ Finished writing to filesystem cache in 13.6s
+[00:39:16.665] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:39:16.668] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'count')
+[00:39:16.788] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[00:39:28.904] Server  LOG     ○ Compiling /vaults/yields ...
+[00:39:44.574] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:39:44.575] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'count')
+[00:39:44.713] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[00:40:00.932] Server  LOG     ✓ Finished writing to filesystem cache in 15.2s
+[00:40:13.530] Server  LOG     ✓ Finished filesystem cache database compaction in 12.6s
+[01:13:07.659] Server  LOG     ○ Compiling /vaults/borrow ...
+[01:13:23.423] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[01:13:23.423] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'count')
+[01:13:23.570] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[01:13:48.032] Server  LOG     ✓ Finished filesystem cache database compaction in 13.4s
